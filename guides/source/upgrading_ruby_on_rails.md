@@ -481,9 +481,13 @@ For more information on changes made to Rails 5.2 please see the [release notes]
 
 ### Bootsnap
 
-Rails 5.2 adds bootsnap gem in the [newly generated app's Gemfile](https://github.com/rails/rails/pull/29313).
-The `app:update` command sets it up in `boot.rb`. If you want to use it, then add it in the Gemfile,
-otherwise change the `boot.rb` to not use bootsnap.
+Rails 5.2 adds [bootsnap gem](https://github.com/Shopify/bootsnap) in the [newly generated app's Gemfile](https://github.com/rails/rails/pull/29313).
+The `app:update` command sets it up in `boot.rb`. If you want to use it, then add it in the Gemfile with 
+the following entry, otherwise change the `boot.rb` to not use bootsnap. 
+
+```
+gem 'bootsnap', require: false
+```
 
 ### Expiry in signed or encrypted cookie is now embedded in the cookies values
 
